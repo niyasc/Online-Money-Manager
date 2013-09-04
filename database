@@ -1,0 +1,61 @@
+-- MySQL dump 10.14  Distrib 5.5.32-MariaDB, for Linux (x86_64)
+--
+-- Host: localhost    Database: expense
+-- ------------------------------------------------------
+-- Server version	5.5.32-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `expense`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `expense` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `expense`;
+
+--
+-- Table structure for table `expense`
+--
+
+DROP TABLE IF EXISTS `expense`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `expense` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Day` date DEFAULT NULL,
+  `Item` varchar(30) DEFAULT NULL,
+  `Expense` float DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `expense`
+--
+
+LOCK TABLES `expense` WRITE;
+/*!40000 ALTER TABLE `expense` DISABLE KEYS */;
+INSERT INTO `expense` VALUES (1,'2013-08-22','Embedded System Frank Vahid',330),(3,'2013-07-15','Expense in train',65),(5,'2013-07-16','Mess fees',4000),(6,'2013-07-16','to and back from hamdard',15),(7,'2013-07-17','to and back from hamdard',20),(8,'2013-07-18','to and back from hamdard',15),(9,'2013-07-20','Auto from hamdard',70),(10,'2013-07-20','soap',10),(11,'2013-07-20','washing soap',10),(12,'2013-07-20','tooth paste',15),(13,'2013-07-20','Brush',17),(14,'2013-07-20','Washing poweder',8),(15,'2013-07-20','Sprite',30),(16,'2013-07-22','Nimboo',10),(17,'2013-07-22','Notebook*5',75),(18,'2013-07-22','Pen',5),(19,'2013-07-22','News paper',5),(20,'2013-07-22','blade',10),(21,'2013-07-23','bag',500),(22,'2013-07-23','Riksha',10),(23,'2013-07-28','Comb',5),(24,'2013-07-28','Parachute oil',10),(25,'2013-07-29','Smrithi-ifthar',100),(26,'2013-07-31','to and back from hamdard',45),(27,'2013-08-02','Course fees',6620),(28,'2013-08-08','Nimboo',4),(29,'2013-08-08','Folgel',86),(30,'2013-08-10','Technotip',8),(31,'2013-08-10','Sugar',10),(32,'2013-08-10','washing powder',10),(33,'2013-08-16','gum',10),(34,'2013-08-17','to nizamudhin',5),(35,'2013-08-17','From hamdard',10),(36,'2013-08-17','Print out',60),(37,'2013-08-17','Files',20),(38,'2013-08-22','4*tea(4 days)',20),(39,'2013-08-22','sugar',10),(40,'2013-08-22','soap',10),(41,'2013-08-23','Hostel Fees',4400),(42,'2013-08-23','Tea+Bread',10),(43,'2013-08-23','Wireless communication+Datamin',680),(44,'2013-08-24','Hair cutting',30),(45,'2013-08-26','Calculator battery replace',30),(46,'2013-08-27','Maggi',10),(47,'2013-08-27','Masjid collection',20),(48,'2013-08-31','Soap',10);
+/*!40000 ALTER TABLE `expense` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-09-04 12:27:24
