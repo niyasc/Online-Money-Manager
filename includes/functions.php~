@@ -169,5 +169,27 @@
             trigger_error("Invalid template: $template", E_USER_ERROR);
         }
     }
-
-?>
+   //$test_date = '03/22/2010';
+   function is_valid_date($test_date)
+   {
+	$test_arr  = explode('-', $test_date);
+	if (count($test_arr) == 3) 
+	{
+    		if (checkdate($test_arr[1], $test_arr[2], $test_arr[0]))
+    		{
+    			print "date is valid";
+     		   return true;
+    		} 
+    		else 
+    		{
+    			print "function returns false";
+        		return false;
+    		}
+	} 
+	else 
+	{
+		print "not enough number of arguments";
+    		return false;
+	}
+    } 
+?> 

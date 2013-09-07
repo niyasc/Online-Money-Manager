@@ -1,5 +1,6 @@
 <?php
 	$records=$values["records"];
+	
 	//print_r($records);
 ?>
 <table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto">
@@ -34,6 +35,7 @@
 							</tr>
 							<?php
 								$i=1;
+								$total=0;
 								foreach($records as $item)
 								{
 							?>
@@ -53,8 +55,23 @@
 							</td>
 							<?php
 									$i++;
+									$total+=$item['Expense'];
+									
 								}
 							?>
+							<tr style="font-weight:bold">
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+									Total
+								</td>
+								<td>
+									<?=$total?>
+								</td>
+							</tr>
+								
 							
 							
 						</table>

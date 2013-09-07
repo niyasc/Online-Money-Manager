@@ -1,3 +1,6 @@
+<?php
+	date_default_timezone_set('Asia/Calcutta');
+?>
 <table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto">
 	<tr>
 		<td style="width:200px">
@@ -10,6 +13,39 @@
 					<h3>Add Record</h3>
 					</td>
 				</tr>
+
+				<?php
+					if(!empty($values["error"]))
+					{
+				?>
+				<tr>
+					<td style="text-align:center">
+					<label class="label label-important">
+					<?=$values["error"]?>
+					</label>
+					</td>
+				</tr>
+				<?php
+					}
+					
+				?>
+				
+				<?php
+					if(!empty($values["message"]))
+					{
+				?>
+				<tr>
+					<td style="text-align:center">
+					<label class="label label-success">
+					<?=$values["message"]?>
+					</label>
+					</td>
+				</tr>
+				<?php
+					}
+					
+				?>
+					
 				<form method="post" action="add-entry.php">
 				<tr>
 					<td style="text-align:center;margin-left:auto;margin-right:auto">
@@ -20,7 +56,7 @@
 									Date
 								</td>
 								<td>
-									<input type="date" name="date" placeholder="Date" required=""/>
+									<input type="date" name="date" placeholder="Date" required="" value="<?=date('Y-m-d')?>"/>
 								</td>
 							</tr>
 							<tr>

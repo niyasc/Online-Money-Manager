@@ -11,6 +11,18 @@
 </label>
 </div>
 <?php
+	} 
+	if(!empty($values["message"]))
+	{
+?>
+<div style="text-align:center">
+<label class='label label-success' >
+
+		<?=$values["message"]?>
+
+</label>
+</div>
+<?php
 	}  
 ?>
 <table style="margin-left:auto;margin-right:auto">

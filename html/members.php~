@@ -6,7 +6,7 @@
     // if form was submitted
     if(!empty($_SESSION["uname"]))
     {
-    	if(empty($_GET["page"]) or $_GET["page"]=="statistics")
+    	if(empty($_GET["page"]) or ($_GET["page"]=="statistics"))
     	{	
     		$total=query("select sum(Expense) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
     		$days=query("select datediff((select max(Day) from expense where User=(select id from accounts where uname=?)),(select min(Day) from expense where User=(select id from accounts where uname=?)))",$_SESSION["uname"],$_SESSION["uname"]);
@@ -14,7 +14,14 @@
     		//print_r($days);
     		$total=$total[0]["sum(Expense)"];
     		$days=$days[0]["datediff((select max(Day) from expense where User=(select id from accounts where uname=?)),(select min(Day) from expense where User=(select id from accounts where uname=?)))"];
-    		$average=$total/$days;
+    		if($days==0)
+    		{
+    			$average=$total;
+    		}
+    		else
+    		{
+    			$average=$total/$days;
+    		}
     		//print $days;
     		//print $total;
     		render("statistics.php",["title"=>"Statistics","total"=>$total,"average"=>$average,"days"=>$days]);
@@ -25,7 +32,7 @@
     	}
     	else if($_GET["page"]=="show_records")
     	{
-    		$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
+    		$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?) order by Day asc",$_SESSION["uname"]);
     		render("show_records.php",["title"=>"Show Records","records"=>$records]);
     	}
     	else
@@ -53,7 +60,16 @@
         if (count($rows) == 1)
         {
         	$_SESSION["uname"]=$_POST["uname"];
-        	render("statistics.php",["title"=>"Statistics"]);
+        	$total=query("select sum(Expense) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
+    		$days=query("select datediff((select max(Day) from expense where User=(select id from accounts where uname=?)),(select min(Day) from expense where User=(select id from accounts where uname=?)))",$_SESSION["uname"],$_SESSION["uname"]);
+    		//print_r($total);
+    		//print_r($days);
+    		$total=$total[0]["sum(Expense)"];
+    		$days=$days[0]["datediff((select max(Day) from expense where User=(select id from accounts where uname=?)),(select min(Day) from expense where User=(select id from accounts where uname=?)))"];
+    		$average=$total/$days;
+    		//print $days;
+    		//print $total;
+    		render("statistics.php",["title"=>"Statistics","total"=>$total,"average"=>$average,"days"=>$days]);
         }
         else
         {
