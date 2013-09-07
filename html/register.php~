@@ -30,7 +30,9 @@
        	{
        	
        		query("insert into accounts(uname,password) values(?,password(?))",$_POST["uname"],$_POST["password"]);
-        	render("members.php",["title"=>"Regisration success","message"=>"You have been registered succesfully"]);
+       		print("Your account has been created successfully, Redirecting to Login page");
+       		sleep(2);
+        	redirect("members.php");
     	}
     	}
     }

@@ -30,7 +30,8 @@
        	{
        	
        		query("insert into accounts(uname,password) values(?,password(?))",$_POST["uname"],$_POST["password"]);
-        	redirect("members.php");
+       		redirect("account_created.php");
+        	//redirect("members.php");
     	}
     	}
     }
