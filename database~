@@ -32,12 +32,10 @@ DROP TABLE IF EXISTS `expense`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `expense` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `User` int(11)
   `Day` date DEFAULT NULL,
   `Item` varchar(30) DEFAULT NULL,
   `Expense` float DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  foreign key(User) references accounts(id)
+  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

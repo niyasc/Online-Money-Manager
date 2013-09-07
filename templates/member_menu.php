@@ -2,14 +2,21 @@
 	<tr>
 				
 		<td  style="width:200px">
-			<a class='btn btn-primary'  style="width:200px" href="members.php?view=profile">Profile</a>
+			<a class='btn btn-primary'  style="width:200px" href="members.php?page=statistics">Statistics</a>
 		</td>
 					
 	</tr>
 	<tr>
 					
 		<td  style="width:200px">
-			<a class='btn btn-primary'  style="width:200px" href="members.php?view=member_list&page=1">See Members</a>
+			<a class='btn btn-primary'  style="width:200px" href="members.php?page=add_record">Add Record</a>
+		</td>
+					
+	</tr>
+	<tr>
+					
+		<td  style="width:200px">
+			<a class='btn btn-primary'  style="width:200px" href="members.php?page=show_records">Show Records</a>
 		</td>
 					
 	</tr>

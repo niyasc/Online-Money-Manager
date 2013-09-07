@@ -1,0 +1,56 @@
+<table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto">
+	<tr>
+		<td style="width:200px">
+			<?php require("../templates/member_menu.php") ?>
+		</td>
+		<td>
+			<table style="width:700px">
+				<tr>
+					<td>
+					<h3>Add Record</h3>
+					</td>
+				</tr>
+				<form method="post" action="add-entry.php">
+				<tr>
+					<td style="text-align:center;margin-left:auto;margin-right:auto">
+					
+						<table class='table table-striped table-bordered' style="margin-left:auto;margin-right:auto">
+							<tr>
+								<td>
+									Date
+								</td>
+								<td>
+									<input type="date" name="date" placeholder="Date" required=""/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Item
+								</td>
+								<td>
+									<input type="text" name="item" placeholder="Item" required=""/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Expense
+								</td>
+								<td>
+									<input type="text" name="price" placeholder="Expense" required=""/>
+								</td>
+							</tr>
+							
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align:center">
+						<input type="submit" class="btn" value="Add Record"/>
+					</td>
+				</tr>
+				</form>
+				
+			</table>
+		</td>
+	</tr>
+</table>

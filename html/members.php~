@@ -25,7 +25,7 @@
     	}
     	else if($_GET["page"]=="show_records")
     	{
-    		$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?) order by Day asc",$_SESSION["uname"]);
+    		$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
     		render("show_records.php",["title"=>"Show Records","records"=>$records]);
     	}
     	else

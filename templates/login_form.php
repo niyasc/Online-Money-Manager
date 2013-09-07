@@ -17,12 +17,12 @@
 
 	<tr>
 		<td style="text-align:left">
-			<label>Email</label>
+			<label>Username</label>
 		</td>
 	</tr>
 	<tr>
 		<td style="text-align:center">
-			<input type="email" placeholder="email" name="email" required=""/>
+			<input type="text" placeholder="Username" name="uname" required=""/>
 		</td>
 	</tr>
 	<tr>
@@ -32,7 +32,7 @@
 	</tr>
 	<tr>
 		<td style="text-align:center">
-			<input type="password" placeholder="password" name="password" required=""/>
+			<input type="password" placeholder="Password" name="password" required=""/>
 		</td>
 	</tr>
 	<tr>

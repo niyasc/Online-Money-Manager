@@ -6,16 +6,16 @@
      **********************************************************************/
 
     // your database's name
-    define("DATABASE", "565035");
+    define("DATABASE", "expense");
 
     // your database's password
-    define("PASSWORD", "menumber1");
+    define("PASSWORD", "");
 
     // your database's server
     define("SERVER", "");
 
     // your database's username
-    define("USERNAME", "565035");
+    define("USERNAME", "root");
     
 
 ?>
