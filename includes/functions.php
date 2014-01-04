@@ -154,8 +154,6 @@
 	    
             // render header
             require("../templates/header.php");
-            // render main menu
-	    require("../templates/menu.php");
             // render template
             require("../templates/$template");
 

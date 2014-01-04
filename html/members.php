@@ -32,12 +32,24 @@
     	}
     	else if($_GET["page"]=="show_records")
     	{
-    		$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?) order by Day asc",$_SESSION["uname"]);
-    		render("show_records.php",["title"=>"Show Records","records"=>$records]);
+    		if(!empty($_GET["date1"])&&!empty($_GET["date2"]))
+    		{
+    			$from=$_GET["date1"];
+    			$to=$_GET["date2"];
+    			$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?) and Day>=? and Day<=? order by Day asc",$_SESSION["uname"],$from,$to);
+    		}
+    		else
+    		{
+    			$from='yyyy-mm-dd';
+    			$to='yyyy-mm-dd';
+    			$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?) order by Day asc",$_SESSION["uname"]);
+    		}
+    		
+    		render("show_records.php",["title"=>"Show Records","records"=>$records,"from"=>$from,"to"=>$to]);
     	}
     	else
     	{
-    		render("statistics.php",["title"=>"Statistics"]);
+    		echo "page not found";
     	}
     	
     }

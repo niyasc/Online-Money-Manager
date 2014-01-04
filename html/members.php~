@@ -32,12 +32,24 @@
     	}
     	else if($_GET["page"]=="show_records")
     	{
-    		$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?) order by Day asc",$_SESSION["uname"]);
-    		render("show_records.php",["title"=>"Show Records","records"=>$records]);
+    		if(!empty($_GET["date1"])&&!empty($_GET["date2"]))
+    		{
+    			$from=$_GET["date1"];
+    			$to=$_GET["date2"];
+    			$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?) and Day>=? and Day<=? order by Day asc",$_SESSION["uname"],$from,$to);
+    		}
+    		else
+    		{
+    			$from='';
+    			$to='';
+    			$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?) order by Day asc",$_SESSION["uname"]);
+    		}
+    		
+    		render("show_records.php",["title"=>"Show Records","records"=>$records,"from"=>$from,"to"=>$to]);
     	}
     	else
     	{
-    		render("statistics.php",["title"=>"Statistics"]);
+    		echo "page not found";
     	}
     	
     }
@@ -66,9 +78,14 @@
     		//print_r($days);
     		$total=$total[0]["sum(Expense)"];
     		$days=$days[0]["datediff((select max(Day) from expense where User=(select id from accounts where uname=?)),(select min(Day) from expense where User=(select id from accounts where uname=?)))"];
-    		$average=$total/$days;
-    		//print $days;
-    		//print $total;
+    		if($days==0)
+    		{
+    			$average=$total;
+    		}
+    		else
+    		{
+    			$average=$total/$days;
+    		}
     		render("statistics.php",["title"=>"Statistics","total"=>$total,"average"=>$average,"days"=>$days]);
         }
         else

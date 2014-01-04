@@ -4,6 +4,9 @@
     require("../includes/config.php"); 
 
     // render portfolio
-    render("home.php", ["title" => "Home Page"]);
+    if(!empty($_SESSION["uname"]))
+    	redirect("members.php");
+    else
+    	redirect("home.php");
 
 ?>
