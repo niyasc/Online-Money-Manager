@@ -1,6 +1,6 @@
 .header-bg
 {
-background:#C0C0C0;
+background:#D8D8D8 ;
 height:10%;
 width:1200px;
 margin-left:auto;
@@ -18,13 +18,13 @@ margin-right:auto;
 }
 .footer-bg
 {
-background:#C0C0C0;
+background:#D8D8D8 ;
 height:10%;
 width:1200px;
 margin-left:auto;
 margin-right:auto;
 text-align:center;
-color:white;
+color:black;
 
 }
 .content
