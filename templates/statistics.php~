@@ -13,7 +13,7 @@
 				</tr>
 				<tr>
 					<td>
-						<h4>Statisitics from <?=$values["start"]?> to <?=$values["end"]?>
+						<h4>Statisitics from <?=$values["start"]?> to <?=$values["end"]?></h4>
 					</td>
 				</tr>
 				<tr>

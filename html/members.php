@@ -49,24 +49,24 @@
     		{
     			$start=$_GET["date1"];
     			$end=$_GET["date2"];
-    			$records=query("select Item,Day,Expense from expense where User=(select id from accounts where uname=?) and Day>=? and Day<=? order by Day asc",$_SESSION["uname"],$start,$end);
+    			$records=query("select Item,Day,Expense,Category from expense where User=(select id from accounts where uname=?) and Day>=? and Day<=? order by Day asc",$_SESSION["uname"],$start,$end);
     		}
     		else
     		{
     			$start=query("select start from accounts where uname=?",$_SESSION["uname"]);
-    		$end=query("select end from accounts where uname=?",$_SESSION["uname"]);
-    		if($start[0]["start"]==NULL)
-    		{
-    			$start=query("select min(Day) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
-    			$end=query("select max(Day) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
-    			$start=$start[0]["min(Day)"];
-    			$end=$end[0]["max(Day)"];
-    		}
-    		else
-    		{
-    			$start=$start[0]["start"];
-    			$end=$end[0]["end"];
-    		}
+    			$end=query("select end from accounts where uname=?",$_SESSION["uname"]);
+    			if($start[0]["start"]==NULL)
+    			{
+    				$start=query("select min(Day) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
+    				$end=query("select max(Day) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
+    				$start=$start[0]["min(Day)"];
+    				$end=$end[0]["max(Day)"];
+    			}
+    			else
+    			{
+    				$start=$start[0]["start"];
+    				$end=$end[0]["end"];
+    			}
     			$records=query("select Item,Day,Expense,Category from expense where User=(select id from accounts where uname=?) and Day>=? and Day<=? order by Day asc",$_SESSION["uname"],$start,$end);
     		}
     		$categories=query("select category from categories where uid=(select id from accounts where uname=?)",$_SESSION["uname"]);

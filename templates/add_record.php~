@@ -65,9 +65,9 @@
 									Category
 								</td>
 								<td>
-									<select name='category'>
+									<select name='category' autofocus>
 									<?php
-										foreach($category as $values["categories"])
+										foreach($values["categories"] as $category)
 										{
 										echo "<option>";
 										echo $category["category"];
@@ -82,7 +82,7 @@
 									Item
 								</td>
 								<td>
-									<input type="text" name="item" placeholder="Item" required=""/>
+									<input type="text" name="item" placeholder="Item" required="" />
 								</td>
 							</tr>
 							<tr>

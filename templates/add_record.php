@@ -2,7 +2,7 @@
 <?php
 	date_default_timezone_set('Asia/Calcutta');
 ?>
-<table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto">
+<table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto;height:100%">
 	<tr>
 		<td style="width:200px">
 			<?php require("../templates/member_menu.php") ?>
@@ -65,7 +65,7 @@
 									Category
 								</td>
 								<td>
-									<select name='category'>
+									<select name='category' autofocus>
 									<?php
 										foreach($values["categories"] as $category)
 										{
@@ -82,7 +82,7 @@
 									Item
 								</td>
 								<td>
-									<input type="text" name="item" placeholder="Item" required=""/>
+									<input type="text" name="item" placeholder="Item" required="" />
 								</td>
 							</tr>
 							<tr>

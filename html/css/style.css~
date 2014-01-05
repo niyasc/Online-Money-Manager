@@ -1,6 +1,6 @@
 .header-bg
 {
-background:#D8D8D8 ;
+background:#f2f2f2 ;
 height:10%;
 width:1200px;
 margin-left:auto;
@@ -14,11 +14,11 @@ margin-right:auto;
 .promo
 {
 	font-size:18px;
-	color:white ;
+	color:#a2a2a2 ;
 }
 .footer-bg
 {
-background:#D8D8D8 ;
+background:#f2f2f2 ;
 height:10%;
 width:1200px;
 margin-left:auto;

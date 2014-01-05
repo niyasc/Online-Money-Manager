@@ -17,7 +17,7 @@
     	}
     	else 
     	{
-    		query("insert into expense(User,Item,Day,Expense,Category) values((select id from accounts where uname=?),?,?,?,?)",$_SESSION["uname"],$_POST["item"],$_POST["date"],$_POST["price"],$_POST["category"]);
+    		query("insert into expense(User,Item,Day,Expense) values((select id from accounts where uname=?),?,?,?)",$_SESSION["uname"],$_POST["item"],$_POST["date"],$_POST["price"]);
     		render("add_record.php",["title"=>"Add Record","message"=>"Value added successfully","categories"=>$categories]);
     	}
     }
