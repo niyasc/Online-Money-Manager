@@ -1,3 +1,4 @@
+<div class=''>
 <?php
 	$records=$values["records"];
 	
@@ -132,3 +133,4 @@ function checkDates() {
 		</td>
 	</tr>
 </table>
+</div>

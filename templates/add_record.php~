@@ -1,3 +1,4 @@
+<div class='content'>
 <?php
 	date_default_timezone_set('Asia/Calcutta');
 ?>
@@ -23,13 +24,12 @@
 					<label class="label label-important">
 					<?=$values["error"]?>
 					</label>
-					/td>
+					</td>
 				</tr>
 				<?php
 					}
 					
 				?>
-					<
 				
 				<?php
 					if(!empty($values["message"]))
@@ -58,6 +58,23 @@
 								</td>
 								<td>
 									<input type="date" name="date" placeholder="Date" required="" value="<?=date('Y-m-d')?>"/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Category
+								</td>
+								<td>
+									<select name='category'>
+									<?php
+										foreach($category as $values["categories"])
+										{
+										echo "<option>";
+										echo $category["category"];
+										echo "</option>";
+										}
+									?>
+									</select>
 								</td>
 							</tr>
 							<tr>
@@ -91,3 +108,4 @@
 		</td>
 	</tr>
 </table>
+</div>

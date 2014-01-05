@@ -1,3 +1,4 @@
+<div class='content'>
 <form action="register.php" method="POST">
 <?php
 	if(!empty($values["error"]))
@@ -60,3 +61,4 @@
 	</tr>
 </table>
 </form>
+</div>

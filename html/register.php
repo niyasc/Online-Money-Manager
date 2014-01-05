@@ -30,6 +30,9 @@
        	{
        	
        		query("insert into accounts(uname,password) values(?,password(?))",$_POST["uname"],$_POST["password"]);
+       		$id=("select id from accounts where uname=?",$_POST["uname"]);
+       		$id=$id[0]["id"];
+       		query("insert into categories values(?,'Other')",$id);
        		redirect("account_created.php");
         	//redirect("members.php");
     	}

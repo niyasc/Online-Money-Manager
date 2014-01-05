@@ -1,3 +1,4 @@
+<div class='content'>
 <?php
 	date_default_timezone_set('Asia/Calcutta');
 ?>
@@ -61,6 +62,23 @@
 							</tr>
 							<tr>
 								<td>
+									Category
+								</td>
+								<td>
+									<select name='category'>
+									<?php
+										foreach($values["categories"] as $category)
+										{
+										echo "<option>";
+										echo $category["category"];
+										echo "</option>";
+										}
+									?>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
 									Item
 								</td>
 								<td>
@@ -90,3 +108,4 @@
 		</td>
 	</tr>
 </table>
+</div>

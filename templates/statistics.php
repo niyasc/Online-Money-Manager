@@ -1,3 +1,4 @@
+<div class='content'>
 <table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto">
 	<tr>
 		<td style="width:200px">
@@ -8,6 +9,11 @@
 				<tr>
 					<td>
 					<h3>Statistics </h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Statisitics from <?=$values["start"]?> to <?=$values["end"]?></h4>
 					</td>
 				</tr>
 				<tr>
@@ -46,3 +52,4 @@
 		</td>
 	</tr>
 </table>
+</div>

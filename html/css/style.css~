@@ -19,7 +19,7 @@ margin-right:auto;
 .footer-bg
 {
 background:#C0C0C0;
-height:80px;
+height:10%;
 width:1200px;
 margin-left:auto;
 margin-right:auto;
