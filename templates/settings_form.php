@@ -71,8 +71,8 @@ function checkDates() {
 				<tr>
 					<td>
 						<form action='settings.php' method='POST' onsubmit="return checkDates()">
-							<input type='date' name='date1' value="<?=$values['start']?>">
-							<input type='date' name='date2' value="<?=$values['end']?>">
+							From <input type='date' name='date1' value="<?=$values['start']?>">
+							Upto <?=$values['end']?>
 							<input type='submit' class='btn' value='Update'>
 						</form>
 					</td>

@@ -23,7 +23,7 @@ function checkDates() {
 }
 </script>
 <div class='content'>
-<table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto">
+<table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto;height:100%">
 	<tr>
 		<td style="width:200px">
 			<?php require("../templates/member_menu.php") ?>
@@ -71,9 +71,9 @@ function checkDates() {
 				<tr>
 					<td>
 						<form action='settings.php' method='POST' onsubmit="return checkDates()">
-							<input type='date' name='date1' value="<?=$values['start']?>">
-							<input type='date' name='date2' value="<?=$values['end']?>">
-							<input type='submit' class='btn' value='Update'>
+							From <input type='date' name='date1' value="<?=$values['start']?>">
+							<?=$values['end']?>
+							Upto <input type='submit' class='btn' value='Update'>
 						</form>
 					</td>
 				</tr>

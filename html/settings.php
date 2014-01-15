@@ -5,18 +5,16 @@
     if(!empty($_SESSION["uname"]))
     {
     	$start=query("select start from accounts where uname=?",$_SESSION["uname"]);
-    	$end=query("select end from accounts where uname=?",$_SESSION["uname"]);
+    	$end=query("select sysdate()");
+    	$end=$end[0]["sysdate()"];
     	if($start[0]["start"]==NULL)
     	{
     		$start=query("select min(Day) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
-    		$end=query("select max(Day) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
     		$start=$start[0]["min(Day)"];
-    		$end=$end[0]["max(Day)"];
     	}
     	else
     	{
     		$start=$start[0]["start"];
-    		$end=$end[0]["end"];
     	}
     		
 
@@ -42,11 +40,10 @@
     else if(!empty($_POST["date1"]))
     {
     	$date1=$_POST["date1"];
-    	$date2=$_POST["date2"];
-    	if(is_valid_date($date1)&&is_valid_date($date2))
+    	if(is_valid_date($date1))
     	{
     		query("update accounts set start=? where uname=?",$date1,$_SESSION["uname"]);
-    		query("update accounts set end=? where uname=?",$date2,$_SESSION["uname"]);
+    		
     		render("settings_form.php",["title"=>"Settings","message"=>"Date Range Updated Successfully","start"=>$start,"end"=>$end]);
     	}
     	else
