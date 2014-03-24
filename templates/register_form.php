@@ -21,7 +21,7 @@
 			<label>User name</label>
 		</td>
 		<td style="text-align:left">
-			<input type="text" placeholder="Username" name="uname" required=""/>
+			<input class='form-control' type="text" placeholder="Username" name="uname" required=""/>
 		</td>
 	</tr>
 	<tr>
@@ -29,7 +29,7 @@
 			<label>Password</label>
 		</td>
 		<td style="text-align:left">
-			<input type="password" id='password' placeholder="password" name="password" required=""/>
+			<input class = 'form-control' type="password" id='password' placeholder="password" name="password" required=""/>
 		</td>
 	</tr>
 	<tr>
@@ -37,7 +37,7 @@
 			<label>Confirm password</label>
 		</td>
 		<td style="text-align:left">
-			<input type="password" id='passwordconf' placeholder="password again" name="confirmation" required=""/>
+			<input class='form-control' type="password" id='passwordconf' placeholder="password again" name="confirmation" required=""/>
 		</td>
 	</tr>
 	
@@ -46,7 +46,7 @@
 <table style="text-align:center;margin-left:auto;margin-right:auto">
 	<tr>
 		<td style="text-align:center">
-			<input type="submit" class="btn" value="Register"/>
+			<input type="submit" class="btn btn-primary" value="Register"/>
 		</td>
 	</tr>
 	<tr>
@@ -56,7 +56,7 @@
 	</tr>
 	<tr>
 		<td style="text-align:center">
-			<a href="members.php" class="btn">Login</a>
+			<a href="members.php" class="btn btn-default">Login</a>
 		</td>
 	</tr>
 </table>

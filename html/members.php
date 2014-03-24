@@ -36,12 +36,12 @@
     		//print $total;
     		render("statistics.php",["title"=>"Statistics","total"=>$total,"average"=>$average,"days"=>$days,"start"=>$start,"end"=>$end]);
     	}
-    	else if($_GET["page"]=="add_record")
+    	else if($_GET["page"]=="add_expense")
     	{
     		$categories=query("select category from categories where uid=(select id from accounts where uname=?)",$_SESSION["uname"]);
-    		render("add_record.php",["title"=>"Add Record","categories"=>$categories]);
+    		render("add_expense.php",["title"=>"Add Record","categories"=>$categories]);
     	}
-    	else if($_GET["page"]=="show_records")
+    	else if($_GET["page"]=="expense_records")
     	{
     		if(!empty($_GET["date1"])&&!empty($_GET["date2"]))
     		{
@@ -67,7 +67,23 @@
     			$records=query("select Item,Day,Expense,Category from expense where User=(select id from accounts where uname=?) and Day>=? and Day<=? order by Day asc",$_SESSION["uname"],$start,$end);
     		}
     		$categories=query("select category from categories where uid=(select id from accounts where uname=?)",$_SESSION["uname"]);
-    		render("show_records.php",["title"=>"Show Records","records"=>$records,"from"=>$start,"to"=>$end,"categories"=>$categories]);
+    		render("expense_records.php",["title"=>"Show Records","records"=>$records,"from"=>$start,"to"=>$end,"categories"=>$categories]);
+    	}
+    	else if($_GET["page"]=="debits")
+    	{
+    		render("debits.php",["title"=>"Debts"]);
+    	}
+    	else if($_GET["page"]=="credits")
+    	{
+    		render("credits.php",["title"=>"Credits"]);
+    	}
+    	else if($_GET["page"]=="income")
+    	{
+    		render("income.php",["title"=>"Income"]);
+    	}
+    	else if($_GET["page"]=="bank")
+    	{
+    		render("bank-transaction.php", ["title" => "Bank Transactions" ]);
     	}
     	else
     	{

@@ -40,8 +40,8 @@ function checkDates() {
 				<tr>
 					<td>
 						<form action='settings.php' method='POST'>
-							<input type='text' name='category' placeholder='Category' required=''/>
-							<input class='btn' type='submit' value='Add'>
+							<input class = 'form-control'  type='text' name='category' placeholder='Category' required=''/>
+							<input   class='btn btn-block btn-primary' type='submit' value='Add'>
 						</form>
 					</td>
 				</tr>
@@ -55,9 +55,9 @@ function checkDates() {
 				<tr>
 					<td>
 						<form action="settings.php" method='POST'>
-							<input type='password' name='passwd1' placeholder='New Password' required=''/>
-							<input type='password' name='passwd2' placeholder='Confirm Password' required=''/>
-							<input class='btn' type='submit' value='Change'>
+							<input class = 'form-control'  type='password' name='passwd1' placeholder='New Password' required=''/>
+							<input class = 'form-control'  type='password' name='passwd2' placeholder='Confirm Password' required=''/>
+							<input class = 'form-control'  class='btn' type='submit' value='Change'>
 						</form>
 					</td>
 				</tr>
@@ -71,9 +71,9 @@ function checkDates() {
 				<tr>
 					<td>
 						<form action='settings.php' method='POST' onsubmit="return checkDates()">
-							From <input type='date' name='date1' value="<?=$values['start']?>">
-							<?=$values['end']?>
-							Upto <input type='submit' class='btn' value='Update'>
+							From <input class = 'form-control'  type='date' name='date1' value="<?=$values['start']?>">
+							Upto <?=$values['end']?>
+							<input class = 'form-control'  type='submit' class='btn' value='Update'>
 						</form>
 					</td>
 				</tr>

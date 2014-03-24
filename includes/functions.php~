@@ -37,12 +37,7 @@
         // unset any session variables
         $_SESSION = array();
 
-        // expire cookie
-        if (!empty($_COOKIE[session_name()]))
-        {
-            setcookie(session_name(), "", time() - 42000);
-        }
-
+        
         // destroy session
         session_destroy();
     }
@@ -154,8 +149,6 @@
 	    
             // render header
             require("../templates/header.php");
-            // render main menu
-	    require("../templates/menu.php");
             // render template
             require("../templates/$template");
 

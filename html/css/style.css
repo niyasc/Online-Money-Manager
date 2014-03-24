@@ -1,4 +1,4 @@
-.header-bg
+.header-section
 {
 background:#f2f2f2 ;
 height:10%;
@@ -8,13 +8,13 @@ margin-right:auto;
 }
 .header
 {
-	color:black;
+	color:white;
 	font-size:20px;
 }
 .promo
 {
 	font-size:18px;
-	color:#a2a2a2 ;
+	color:silver ;
 }
 .footer-bg
 {

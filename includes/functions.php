@@ -38,10 +38,10 @@
         $_SESSION = array();
 
         // expire cookie
-        if (!empty($_COOKIE[session_name()]))
+       /* if (!empty($_COOKIE[session_name()]))
         {
             setcookie(session_name(), "", time() - 42000);
-        }
+        }*/
 
         // destroy session
         session_destroy();

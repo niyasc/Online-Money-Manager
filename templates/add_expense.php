@@ -51,13 +51,13 @@
 				<tr>
 					<td style="text-align:center;margin-left:auto;margin-right:auto">
 					
-						<table class='table table-striped table-bordered' style="margin-left:auto;margin-right:auto">
+						<table class='table table-striped table-bordered' style="margin-left:auto;margin-right:auto; width:100%">
 							<tr>
 								<td>
 									Date
 								</td>
 								<td>
-									<input type="date" name="date" placeholder="Date" required="" value="<?=date('Y-m-d')?>"/>
+									<input class = 'form-control'  type="date" name="date" placeholder="Date" required="" value="<?=date('Y-m-d')?>"/>
 								</td>
 							</tr>
 							<tr>
@@ -65,7 +65,7 @@
 									Category
 								</td>
 								<td>
-									<select name='category' autofocus>
+									<select class='form-control' name='category' autofocus>
 									<?php
 										foreach($values["categories"] as $category)
 										{
@@ -82,7 +82,7 @@
 									Item
 								</td>
 								<td>
-									<input type="text" name="item" placeholder="Item" required="" />
+									<input class = 'form-control'  type="text" name="item" placeholder="Item" required="" />
 								</td>
 							</tr>
 							<tr>
@@ -90,18 +90,21 @@
 									Expense
 								</td>
 								<td>
-									<input type="text" name="price" placeholder="Expense" required=""/>
+									<input class = 'form-control'  type="text" name="price" placeholder="Expense" required=""/>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td style="text-align:center">
+									<input class = 'btn btn-primary btn-block'  type="submit" class="btn" value="Add Record"/>
 								</td>
 							</tr>
 							
 						</table>
 					</td>
 				</tr>
-				<tr>
-					<td style="text-align:center">
-						<input type="submit" class="btn" value="Add Record"/>
-					</td>
-				</tr>
+				
 				</form>
 				
 			</table>

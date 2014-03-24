@@ -1,5 +1,5 @@
 <div class='content'>
-<form action="members.php" method="POST">
+<form action="members.php" method="POST" class="form-signin" role="form">
 <?php
 	if(!empty($values["error"]))
 	{
@@ -26,16 +26,16 @@
 <?php
 	}  
 ?>
-<table style="margin-left:auto;margin-right:auto">
+<table  class="" style="margin-left:auto;margin-right:auto; width:300px">
 
 	<tr>
-		<td style="text-align:left">
+		<td style="text-align:left; padding-top:10px">
 			<label>Username</label>
 		</td>
 	</tr>
 	<tr>
 		<td style="text-align:center">
-			<input type="text" placeholder="Username" name="uname" required=""/>
+			<input type="text" placeholder="Username" name="uname" required="" class="form-control" />
 		</td>
 	</tr>
 	<tr>
@@ -45,12 +45,16 @@
 	</tr>
 	<tr>
 		<td style="text-align:center">
-			<input type="password" placeholder="Password" name="password" required=""/>
+			<input type="password" placeholder="Password" name="password" required="" class="form-control" >
 		</td>
 	</tr>
 	<tr>
-		<td style="text-align:center">
-			<input type="submit" class="btn" value="Login"/>
+		<td>
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align:center; padding-top:10px">
+			<input type="submit" class="btn btn-primary" value="Login"/>
 		</td>
 	</tr>
 	<tr>
@@ -60,10 +64,11 @@
 	</tr>
 	<tr>
 		<td style="text-align:center">
-			<a href="register.php" class="btn">Register</a>
+			<a href="register.php" class="btn btn-default">Register</a>
 		</td>
 	</tr>
 			
 </table>
+
 </form>
 </div>

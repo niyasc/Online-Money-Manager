@@ -2,7 +2,7 @@
 <table class='table table-bordered table-striped' style="width:1200px; margin-left:auto;margin-right:auto;height:100%">
 	<tr>
 		<td >
-			<table class='table table-bordered table-striped' style="width:750px; margin-left:auto;margin-right:auto">
+			<table class='table table-bordered table-striped' style="width:750px; margin-left:auto;margin-right:auto;height:100%">
 				<tr>
 					<td>
 						<h2>
@@ -11,16 +11,27 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="text-align:justify;font-size:20px">
-<p>This is an online application designed to record individual expenses and to get statistical informations
-such as total expense,average expense...</p>	</td>
+					<td style="text-align:justify;font-size:20px;height:100%">
+<p>
+Expense manager is a web application developed to keep record of your day to day expenses.
+It offers you following features
+<ul>
+	<li>Authenticated Access</li>
+	<li>Overview of expenses</li>
+	<li>Keep Record of Expense</li>
+	<li>Keep Record of Credits</li>
+	<li>Keep Record of Debits</li>
+	<li>Estimate current financial balance></li>
+
+</ul>
+</p>	</td>
 				</tr>
 			</table>
 		</td>
 		<td>
-			<table class='table table-bordered table-striped' style="width:400px; margin-left:auto;margin-right:auto">
+			<table class='table table-bordered table-striped' style="width:400px; margin-left:auto;margin-right:auto;height:100%">
 				<tr>
-					<td>
+					<td style="height:20px">
 						<h4>
 						News & Updates
 						</h4>
