@@ -44,7 +44,7 @@ It offers you following features
 							<?php
 								foreach($news as $new)
 								{
-									echo "<li> <a href='news_detailed.php?id=".$new['id']."'>".$new['title']."</a> </li>";
+									echo "<li> <a href='news-detailed.php?id=".$new['id']."'>".$new['title']."</a> </li>";
 								}
 							?>
 						</ul>

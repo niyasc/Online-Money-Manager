@@ -1,0 +1,50 @@
+<table class ="table table-striped table-bordered" style="width:1200px; margin-left:auto; margin-right:auto">
+<tr>
+<td>
+<table class="table table-striped table-bordered" style="margin-left:auto; margin-right:auto">
+	<tr>
+		<td style="text-align:center">
+			<h3><?=$values["news"]["title"]?></h3>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Posted at : <?=$values["news"]["day"]?>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<?=$values["news"]["content"]?>
+		</td>
+	</tr>
+</table>
+</td>
+<td>
+			<table class='table table-bordered table-striped' style="width:400px; margin-left:auto;margin-right:auto;height:100%">
+				<tr>
+					<td style="height:20px">
+						<h4>
+						News & Updates
+						</h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					
+						<ul>
+							<?php
+								foreach($values["list"] as $new)
+								{
+									echo "<li> <a href='news_detailed.php?id=".$new['id']."'>".$new['title']."</a> </li>";
+								}
+							?>
+						</ul>
+						<div style= "text-align:center">
+							<a href='news-list.php'> View All News</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+</tr>
+</table>

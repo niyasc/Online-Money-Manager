@@ -3,7 +3,7 @@
     // configuration
     require("../includes/config.php"); 
 
-    $news = query("select id, title, day from news order by day limit 0,10");
+    $news = query("select id, title from news limit 0,10 order by day desc");
     render("home.php",["title"=>"Home Page", "news" => $news]);
 
 ?>
