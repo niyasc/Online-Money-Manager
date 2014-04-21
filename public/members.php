@@ -69,22 +69,6 @@
     		$categories=query("select category from categories where uid=(select id from accounts where uname=?)",$_SESSION["uname"]);
     		render("expense_records.php",["title"=>"Show Records","records"=>$records,"from"=>$start,"to"=>$end,"categories"=>$categories]);
     	}
-    	else if($_GET["page"]=="debits")
-    	{
-    		render("debits.php",["title"=>"Debts"]);
-    	}
-    	else if($_GET["page"]=="credits")
-    	{
-    		render("credits.php",["title"=>"Credits"]);
-    	}
-    	else if($_GET["page"]=="income")
-    	{
-    		render("income.php",["title"=>"Income"]);
-    	}
-    	else if($_GET["page"]=="bank")
-    	{
-    		render("bank-transaction.php", ["title" => "Bank Transactions" ]);
-    	}
     	else
     	{
     		echo "page not found";

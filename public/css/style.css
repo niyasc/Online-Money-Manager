@@ -14,7 +14,7 @@ margin-right:auto;
 .promo
 {
 	font-size:18px;
-	color:@gray-lighter ;
+	color:silver ;
 }
 .footer-bg
 {
@@ -32,5 +32,4 @@ color:white;
 	width:1200px;
 	margin-left:auto;
 	margin-right:auto;
-	height:80%;
 }

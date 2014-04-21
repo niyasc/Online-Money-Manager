@@ -1,6 +1,0 @@
-<?php
-	require("../includes/config.php"); 
-	$news = query("select id, title, day from news order by day desc");
-	print 'hi';
-	//render("news-list.php", [ "title" => "News Feed", "news" => $news);
-?>

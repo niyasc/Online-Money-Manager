@@ -86,7 +86,6 @@
 					echo $record["amount"];
 				echo "</td>";
 			echo "</tr>";
-			$i += 1;
 		}
 	?>
 			
