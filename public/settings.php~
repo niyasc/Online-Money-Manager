@@ -68,6 +68,8 @@
     	render("settings_form.php",["title"=>"Settings","start"=>$start,"end"=>$end,"cb"=>$cb,"cbb"=>$cbb,"message"=>"Balance Updated Successfully"]);
     }
     else
+    	echo $cb;
+    	echo $cbb;
     	render("settings_form.php",["title"=>"Settings","start"=>$start,"end"=>$end,"cb"=>$cb,"cbb"=>$cbb]);
     }
     else

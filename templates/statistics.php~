@@ -43,22 +43,6 @@
 									<?=round($values["average"],2)?>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									Current Balance
-								</td>
-								<td>
-									<?=round($values["cb"],2)?>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Current Bank Balance
-								</td>
-								<td>
-									<?=round($values["cbb"],2)?>
-								</td>
-							</tr>
 							
 						</table>
 					</td>

@@ -20,7 +20,7 @@
 		{
 			$id = $_GET["id"];
 			query("update credit set status='1' where id=?",$id);
-			$amount = query("select amount for credit where id=?",$id);
+			$amount = query("select amount from credit where id=?",$id);
 			$amount = $amount["0"]["amount"];
 			
 			$uid = query("select id from accounts where uname = ?",$_SESSION["uname"]);

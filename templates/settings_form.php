@@ -77,6 +77,41 @@ function checkDates() {
 						</form>
 					</td>
 				</tr>
+				<tr>
+					<td>
+						<h4>Set Balance</h4>
+					</td>
+				</tr>
+				<form action = 'settings.php' method='POST'>
+				<tr>
+					<td>
+						<table class = 'table table-bordered'>
+							<tr>
+								<td>
+									Current Balance
+								</td>
+								<td>
+									Current Bank Balance
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input class='form-control' type="text" value="<?=$values['cb']?>" name='cb' required=""/>
+								</td>
+								<td>
+									<input class='form-control' type="text" value="<?=$values['cbb']?>" name='cbb' required=""/>
+								</td>
+							</tr>
+								
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='submit' class='btn btn-primary btn-block' value="Set Balance">
+					</td>
+				</tr>
+				</form>
 				<?php 
 		if(!empty($values["message"]))
 		{

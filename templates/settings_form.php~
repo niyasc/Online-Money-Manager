@@ -57,7 +57,7 @@ function checkDates() {
 						<form action="settings.php" method='POST'>
 							<input class = 'form-control'  type='password' name='passwd1' placeholder='New Password' required=''/>
 							<input class = 'form-control'  type='password' name='passwd2' placeholder='Confirm Password' required=''/>
-							<input class = 'form-control'  class='btn' type='submit' value='Change'>
+							<input class='btn btn-block btn-primary' type='submit' value='Change'>
 						</form>
 					</td>
 				</tr>
@@ -73,10 +73,45 @@ function checkDates() {
 						<form action='settings.php' method='POST' onsubmit="return checkDates()">
 							From <input class = 'form-control'  type='date' name='date1' value="<?=$values['start']?>">
 							Upto <?=$values['end']?>
-							<input class = 'form-control'  type='submit' class='btn' value='Update'>
+							<input class='btn btn-block btn-primary'  type='submit'  value='Update'>
 						</form>
 					</td>
 				</tr>
+				<tr>
+					<td>
+						<h4>Set Balance</h4>
+					</td>
+				</tr>
+				<form action = 'settings.php' method='POST'>
+				<tr>
+					<td>
+						<table class = 'table table-bordered'>
+							<tr>
+								<td>
+									Current Balance
+								</td>
+								<td>
+									Current Bank Balance
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input class='form-control' type="number" value="<?=$values['cb']?>" name='cb' required=""/>
+								</td>
+								<td>
+									<input class='form-control' type="number" value="<?=$values['cbb']?>" name='cbb' required=""/>
+								</td>
+							</tr>
+								
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type='submit' class='btn btn-primary btn-block' value="Set Balance">
+					</td>
+				</tr>
+				</form>
 				<?php 
 		if(!empty($values["message"]))
 		{

@@ -20,7 +20,7 @@
 			$nb = $cb+$_POST["amount"];
 			query("update accounts set balance=? where id=?",$nb, $id);
 			$records = query("select * from income where id = ?", $id);
-			render("income.php", ["title"=>"Income records", "records"=>$records]);
+			render("income.php", ["title"=>"Income records", "records"=>$records,"message"=>"Record Added"]);
 		}
 	}
 	else

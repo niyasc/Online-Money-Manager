@@ -1,5 +1,5 @@
 <div class='content'>
-<table class='table table-bordered table-striped' style="width:1200px; margin-left:auto;margin-right:auto;height:100%">
+<table class='table table-bordered table-striped' style="width:1200px; margin-left:auto;margin-right:auto;">
 	<tr>
 		<td >
 			<table class='table table-bordered table-striped' style="width:750px; margin-left:auto;margin-right:auto;height:100%">
@@ -11,20 +11,9 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="text-align:justify;font-size:20px;height:100%">
-<p>
-Expense manager is a web application developed to keep record of your day to day expenses.
-It offers you following features
-<ul>
-	<li>Authenticated Access</li>
-	<li>Overview of expenses</li>
-	<li>Keep Record of Expense</li>
-	<li>Keep Record of Credits</li>
-	<li>Keep Record of Debits</li>
-	<li>Estimate current financial balance</li>
-
-</ul>
-</p>	</td>
+					<td style="text-align:justify;font-size:20px;">
+						<div id="comslider_in_point_214345"></div><script type="text/javascript">var oCOMScript214345=document.createElement('script');oCOMScript214345.src="http://commondatastorage.googleapis.com/comslider/target/users/1398099616xef15dfdc4f22301cf9b2a470cc9c96ba/comslider.js?timestamp=1398100013";oCOMScript214345.type='text/javascript';document.getElementsByTagName("head").item(0).appendChild(oCOMScript214345);</script>
+					</td>
 				</tr>
 			</table>
 		</td>

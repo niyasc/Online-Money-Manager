@@ -1,7 +1,7 @@
 .header-section
 {
 background:#f2f2f2 ;
-height:10%;
+height:400px;
 width:1200px;
 margin-left:auto;
 margin-right:auto;
@@ -19,7 +19,7 @@ margin-right:auto;
 .footer-bg
 {
 background:black ;
-height:10%;
+height:20px;
 width:1200px;
 margin-left:auto;
 margin-right:auto;
@@ -32,5 +32,4 @@ color:white;
 	width:1200px;
 	margin-left:auto;
 	margin-right:auto;
-	height:80%;
 }

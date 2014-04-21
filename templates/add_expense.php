@@ -47,7 +47,7 @@
 					
 				?>
 					
-				<form method="post" action="add-entry.php">
+				<form method="post" action="add-expense.php">
 				<tr>
 					<td style="text-align:center;margin-left:auto;margin-right:auto">
 					

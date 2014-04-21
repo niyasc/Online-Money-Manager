@@ -14,7 +14,7 @@
 			$nb = $cb+$_POST["amount"];
 			query("update accounts set balance=? where id=?",$nb, $uid);
 			$records = query("select * from credit where uid = ?", $uid);
-			render("credits.php", ["title"=>"credit records", "records"=>$records]);
+			render("credits.php", ["title"=>"credit records", "records"=>$records, "message"=>"Record Added"]);
 		}
 		else if(!empty($_GET["action"]))
 		{
@@ -32,7 +32,7 @@
 			query("update accounts set balance=? where id=?",$nb, $uid);
 			
 			$records = query("select * from credit  where uid = ?", $uid);
-			render("credits.php", ["title"=>"credit records", "records"=>$records]);
+			render("credits.php", ["title"=>"credit records", "records"=>$records, "message"=>"Record Closed"]);
 		}
 		else
 		{

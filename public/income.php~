@@ -15,7 +15,7 @@
 			$id = query("select id from accounts where uname = ?",$_SESSION["uname"]);
 			$id = $id["0"]["id"];
 			query("insert into income values(?, ?, ?, ?)", $id, $_POST["date"], $_POST["source"], $_POST["amount"]);
-			$cb = query("select balance from accounts where id = ", $id);
+			$cb = query("select balance from accounts where id = ?", $id);
 			$cb = $cb["0"]["balance"];
 			$nb = $cb+$_POST["amount"];
 			query("update accounts set balance=? where id=?",$nb, $id);

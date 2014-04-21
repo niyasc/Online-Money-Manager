@@ -14,6 +14,37 @@
 					<h3>Income Recrods</h3>
 					</td>
 				</tr>
+				<?php
+					if(!empty($values["error"]))
+					{
+				?>
+				<tr>
+					<td style="text-align:center">
+					<label class="label label-important">
+					<?=$values["error"]?>
+					</label>
+					</td>
+				</tr>
+				<?php
+					}
+					
+				?>
+				
+				<?php
+					if(!empty($values["message"]))
+					{
+				?>
+				<tr>
+					<td style="text-align:center">
+					<label class="label label-success">
+					<?=$values["message"]?>
+					</label>
+					</td>
+				</tr>
+				<?php
+					}
+					
+				?>
 				<tr>
 					<td>
 					<form action="income.php" method="POST">

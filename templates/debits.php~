@@ -92,7 +92,7 @@
 							echo "<td>";
 								if($record["status"]=="0")
 								{
-									echo "<a href='debits.php?action=finish&id=".$record["id"]."' class='btn'>Close Debit</a>";
+									echo "<a href='debits.php?action=finish&id=".$record["id"]."' class='btn btn-primary'>Close Debit</a>";
 								}
 								else
 								{

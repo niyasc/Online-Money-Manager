@@ -20,10 +20,19 @@
 		{
 			$id = $_GET["id"];
 			query("update debit set status='1' where id=?",$id);
+			$amount = query("select amount from debit where id=?",$id);
+			$amount = $amount["0"]["amount"];
+			
 			$uid = query("select id from accounts where uname = ?",$_SESSION["uname"]);
 			$uid = $uid["0"]["id"];
+			
+			$cb = query("select balance from accounts where id = ?", $uid);
+			$cb = $cb["0"]["balance"];
+			$nb = $cb+$amount;
+			query("update accounts set balance=? where id=?",$nb, $uid);
+			
 			$records = query("select * from debit  where uid = ?", $uid);
-			render("debits.php", ["title"=>"Debit records", "records"=>$records]);
+			render("credits.php", ["title"=>"Debit records", "records"=>$records]);
 		}
 		else
 		{
