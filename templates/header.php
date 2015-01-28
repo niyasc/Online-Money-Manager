@@ -11,7 +11,7 @@
 </header>
 <body bgcolor=black>
 <a href=../html>
-<table class='bg-primary header-section' style="width:1200px">
+<table class='bg-primary header-section'>
 	<tr>
 		<td>
 			<div class='header'>
