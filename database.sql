@@ -34,7 +34,7 @@ CREATE TABLE `accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uname` varchar(20) DEFAULT NULL,
   `password` varchar(128) DEFAULT NULL,
-  `start` date DEFAULT NULL,
+  `start` date DEFAULT CURRENT_TIMESTAMP,
   `balance` decimal(10,0) DEFAULT '0',
   `bbalance` decimal(10,0) DEFAULT '0',
   PRIMARY KEY (`id`)

@@ -20,8 +20,8 @@
 					<input type="password" name="password" class="form-control" id="password">
 				</div>
 				<div class="form-group">
-					<label for="passwordconf">Confirm Password</label>
-					<input type="passwordconf" name="passwordconf" class="form-control" id="password">
+					<label for="confirmation">Confirm Password</label>
+					<input type="password" name="confirmation" class="form-control" id="confirmation">
 				</div>
 
 				<button type="submit" class="btn btn-primary btn-block">Register</button>

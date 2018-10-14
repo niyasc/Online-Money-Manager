@@ -8,10 +8,10 @@ if(!empty($_SESSION["uname"]))
 {
    if(empty($_GET["page"]) or ($_GET["page"]=="statistics"))
    {	
-       
+
       $start=query("select start from accounts where uname=?",$_SESSION["uname"]);
       $end=query("select sysdate()");
-      $end=$end[0]['sysdate()'];
+      $end= date("Y-m-d");
       if($start[0]["start"]==NULL)
       {
          $start=query("select min(Day) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
@@ -37,10 +37,10 @@ if(!empty($_SESSION["uname"]))
 
      $uid = query("select id from accounts where uname=?", $_SESSION["uname"]);
      $uid = $uid[0]["id"];
-     
+
      $cb = query("select balance from accounts where id = ?",$uid);
      $cb = $cb[0]['balance'];
-     
+
      $cbb = query("select bbalance from accounts where id = ?", $uid);
      $cbb = $cbb[0]['bbalance'];
 
@@ -64,7 +64,7 @@ else if($_GET["page"]=="expense_records")
      $start=query("select start from accounts where uname=?",$_SESSION["uname"]);
      $end=query("select sysdate()");
      $end=$end[0]['sysdate()'];
-     
+
      if($start[0]["start"]==NULL)
      {
         $start=query("select min(Day) from expense where User=(select id from accounts where uname=?)",$_SESSION["uname"]);
