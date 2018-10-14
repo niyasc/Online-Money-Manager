@@ -19,9 +19,9 @@
 -- Current Database: `expense`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `expense` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `expense`;
+
+USE `epiz_22844332_expense`;
 
 --
 -- Table structure for table `accounts`

@@ -1,56 +1,63 @@
-<div class='content'>
-<?php
-	date_default_timezone_set('Asia/Calcutta');
-?>
-<table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto;height:100%">
-	<tr>
-		<td style="width:200px">
+<div class='container-fluid'>
+	<div class="row">		
+		<div class="col-md-9 order-md-2">
+			<h3>Add Record</h3>
+			<hr>
+		</div>
+		<div class="col-md-3 order-md-1">
 			<?php require("../templates/member_menu.php") ?>
-		</td>
-		<td>
-			<table style="width:700px">
-				<tr>
-					<td>
-					<h3>Add Record</h3>
-					</td>
-				</tr>
+		</div>
+	</div>
+</div>
+<div class='container'>
+	<div class="row">
+		<div class="col-md-3">
+			<?php require("../templates/member_menu.php") ?>
+		</div>
+		<div class="col-md-9">
 
-				<?php
-					if(!empty($values["error"]))
-					{
+			<tr>
+				<td>
+					<h3>Add Record</h3>
+				</td>
+			</tr>
+
+			<?php
+			if(!empty($values["error"]))
+			{
 				?>
 				<tr>
 					<td style="text-align:center">
-					<label class="label label-important">
-					<?=$values["error"]?>
-					</label>
+						<label class="label label-important">
+							<?=$values["error"]?>
+						</label>
 					</td>
 				</tr>
 				<?php
-					}
-					
-				?>
-				
-				<?php
-					if(!empty($values["message"]))
-					{
+			}
+
+			?>
+
+			<?php
+			if(!empty($values["message"]))
+			{
 				?>
 				<tr>
 					<td style="text-align:center">
-					<label class="label label-success">
-					<?=$values["message"]?>
-					</label>
+						<label class="label label-success">
+							<?=$values["message"]?>
+						</label>
 					</td>
 				</tr>
 				<?php
-					}
-					
-				?>
-					
-				<form method="post" action="add-expense.php">
+			}
+
+			?>
+
+			<form method="post" action="add-expense.php">
 				<tr>
 					<td style="text-align:center;margin-left:auto;margin-right:auto">
-					
+
 						<table class='table table-striped table-bordered' style="margin-left:auto;margin-right:auto; width:100%">
 							<tr>
 								<td>
@@ -66,14 +73,14 @@
 								</td>
 								<td>
 									<select class='form-control' name='category' autofocus>
-									<?php
+										<?php
 										foreach($values["categories"] as $category)
 										{
-										echo "<option>";
-										echo $category["category"];
-										echo "</option>";
+											echo "<option>";
+											echo $category["category"];
+											echo "</option>";
 										}
-									?>
+										?>
 									</select>
 								</td>
 							</tr>
@@ -100,15 +107,15 @@
 									<input class = 'btn btn-primary btn-block'  type="submit" class="btn" value="Add Record"/>
 								</td>
 							</tr>
-							
+
 						</table>
 					</td>
 				</tr>
-				
-				</form>
-				
-			</table>
-		</td>
-	</tr>
+
+			</form>
+
+		</table>
+	</td>
+</tr>
 </table>
 </div>

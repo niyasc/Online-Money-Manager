@@ -1,7 +1,15 @@
-<div class='content'>
-<?php
-	date_default_timezone_set('Asia/Calcutta');
-?>
+<div class='container-fluid'>
+	<div class="row">		
+		<div class="col-md-9 order-md-2">
+			<h3>INCOME</h3>
+			<hr>
+		</div>
+		<div class="col-md-3 order-md-1">
+			<?php require("../templates/member_menu.php") ?>
+		</div>
+	</div>
+</div>
+
 <table class='table table-striped table-bordered' style="width:1200px;margin-left:auto;margin-right:auto;height:100%">
 	<tr>
 		<td style="width:200px">

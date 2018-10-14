@@ -1,64 +1,33 @@
-<div class='content'>
-<form action="register.php" method="POST">
-<?php
-	if(!empty($values["error"]))
-	{
-?>
-<div style="text-align:center">
-<label class='label label-important' >
+<div class='container-fluid'>
+	<div class="row justify-content-center">
+		<div class="col-md-4">
+			<form action="register.php" method="POST">
+				<?php
+				if(!empty($values["error"]))
+				{
+					?>
+					<div class="alert alert-danger">
+						<?=$values["error"]?>
+					</div>
+					<?php
+				} ?>
+				<div class="form-group">
+					<label for="uname">User Name</label>
+					<input type="text" id="uname" name="uname" required="" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" name="password" class="form-control" id="password">
+				</div>
+				<div class="form-group">
+					<label for="passwordconf">Confirm Password</label>
+					<input type="passwordconf" name="passwordconf" class="form-control" id="password">
+				</div>
 
-		<?=$values["error"]?>
-
-</label>
-</div>
-<?php
-	}  
-?>
-<table class='table table-bordered' style="margin-left:auto;margin-right:auto;width:500px">
-
-	<tr>
-		<td style="text-align:left">
-			<label>User name</label>
-		</td>
-		<td style="text-align:left">
-			<input class='form-control' type="text" placeholder="Username" name="uname" required=""/>
-		</td>
-	</tr>
-	<tr>
-		<td style="text-align:left">
-			<label>Password</label>
-		</td>
-		<td style="text-align:left">
-			<input class = 'form-control' type="password" id='password' placeholder="password" name="password" required=""/>
-		</td>
-	</tr>
-	<tr>
-		<td style="text-align:left">
-			<label>Confirm password</label>
-		</td>
-		<td style="text-align:left">
-			<input class='form-control' type="password" id='passwordconf' placeholder="password again" name="confirmation" required=""/>
-		</td>
-	</tr>
-	
-			
-</table>
-<table style="text-align:center;margin-left:auto;margin-right:auto">
-	<tr>
-		<td style="text-align:center">
-			<input type="submit" class="btn btn-primary" value="Register"/>
-		</td>
-	</tr>
-	<tr>
-		<td style="text-align:center">
-			OR
-		</td>
-	</tr>
-	<tr>
-		<td style="text-align:center">
-			<a href="members.php" class="btn btn-default">Login</a>
-		</td>
-	</tr>
-</table>
-</form>
+				<button type="submit" class="btn btn-primary btn-block">Register</button>
+				<hr>
+				<a href="members.php" class="btn btn-link btn-block">Login</a>
+			</form>
+		</div>
+	</div>
 </div>

@@ -76,6 +76,7 @@
             catch (Exception $e)
             {
                 // trigger (big, orange) error
+                print($e);
                 trigger_error($e->getMessage(), E_USER_ERROR);
                 exit;
             }
