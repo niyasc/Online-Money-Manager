@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<?php if (isset($title)): ?>
 		<title>Online Expense Manager : <?= htmlspecialchars($title) ?></title>
@@ -10,6 +12,8 @@
 		<script type="text/javascript" src="js/jquery-3.3.1.slim.min.js" defer=""></script>
 		<script type="text/javascript" src="js/bootstrap.min.js" defer=""></script>
 		<script type="text/javascript" src="js/main.js" defer=""></script>
+		<meta name="description" content="An online application to keep record of expenses, and to see the brief, and detailed analysis on the expenses">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<header>

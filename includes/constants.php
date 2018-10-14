@@ -9,13 +9,13 @@
     define("DATABASE", "epiz_22844332_expense");
 
     // your database's password
-    define("PASSWORD", "behonest");
+    define("PASSWORD", "Yk1zkl28fZIo");
 
     // your database's server
-    define("SERVER", "localhost");
+    define("SERVER", "sql310.epizy.com");
 
     // your database's username
-    define("USERNAME", "niyasc");
+    define("USERNAME", "epiz_22844332");
     
 
 ?>
